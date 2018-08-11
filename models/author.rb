@@ -39,4 +39,10 @@ class Author
     values = [@first_name, @last_name, @id]
     SqlRunner.run(sql, values)
   end
+
+  def self.delete_all()
+    sql = "DELETE FROM authors"
+    SqlRunner.run(sql)
+  end
+
 end

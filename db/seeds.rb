@@ -2,6 +2,8 @@ require('pry-byebug')
 
 require_relative('../models/author.rb')
 
+Author.delete_all
+
 author1 = Author.new({
   'first_name' => "Elizabeth",
   'last_name' => "Strout"
