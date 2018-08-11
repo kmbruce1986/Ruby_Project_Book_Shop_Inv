@@ -27,5 +27,12 @@ class Book
     @id = book['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM books"
+    books = SqlRunner.run(sql)
+    result = books.map {|book| Book.new(book)}
+    return result
+  end
+
 
 end
