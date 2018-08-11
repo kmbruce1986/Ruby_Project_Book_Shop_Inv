@@ -25,5 +25,10 @@ class TestBook < MiniTest::Test
     assert_equal("With a rare combination of brilliant storytelling, exquisite prose, and remarkable insight into character, Elizabeth Strout has brought to life two deeply human protagonists whose struggles and triumphs will resonate with readers long after they turn the final page.", @book1. description)
   end
 
+    def test_can_get_quantity
+      assert_equal(5, @book1. quantity)
+    end
+
+
 
 end
