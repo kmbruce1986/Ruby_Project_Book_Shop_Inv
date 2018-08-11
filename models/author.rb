@@ -13,14 +13,14 @@ class Author
 
   end
 
-  def save
+  def save()
     sql = "INSERT INTO authors (first_name, last_name) VALUES ($1, $2) RETURNING id"
     values = [@first_name, @last_name]
     ticket = SqlRunner.run(sql, values).first
     @id = ticket['id'].to_i
   end
 
-  def self.all
+  def self.all()
     sql = "SELECT * FROM authors"
     authors = SqlRunner.run(sql)
     result = authors.map {|author| Author.new(author)}
@@ -45,4 +45,10 @@ class Author
     SqlRunner.run(sql)
   end
 
+  def delete()
+    sql = "DELETE FROM authors
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 end
