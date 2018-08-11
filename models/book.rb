@@ -15,6 +15,9 @@ class Book
 
   end
 
-
+  def calculate_markup()
+    markup = @selling_price - @cost_price
+    return markup
+  end
 
 end
