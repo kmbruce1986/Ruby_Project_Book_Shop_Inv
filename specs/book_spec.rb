@@ -37,6 +37,10 @@ class TestBook < MiniTest::Test
     assert_equal(10, @book1.selling_price)
   end
 
+  def test_can_calculate_markup
+    assert_equal(7, @book1.calculate_markup)
+  end
+
 
 
 
