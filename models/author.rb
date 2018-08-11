@@ -21,10 +21,17 @@ class Author
   end
 
   def self.all
-  sql = "SELECT * FROM authors"
-  authors = SqlRunner.run(sql)
-  result = authors.map {|author| Author.new(author)}
-  return result
-end
+    sql = "SELECT * FROM authors"
+    authors = SqlRunner.run(sql)
+    result = authors.map {|author| Author.new(author)}
+    return result
+  end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM authors WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    return author = Author.new(result)
+  end
 
 end
