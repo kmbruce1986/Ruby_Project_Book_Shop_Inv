@@ -17,6 +17,9 @@ class TestBook < MiniTest::Test
     assert_equal("Literary Fiction", @book1. genre)
   end
 
+  def test_can_get_author
+    assert_equal("Elizabeth Strout", @book1. author)
+  end
 
 
 
