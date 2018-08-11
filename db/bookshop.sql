@@ -11,7 +11,7 @@ CREATE TABLE books (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
   genre VARCHAR(255),
-  author INT REFERENCES authors(id) ON DELETE CASCADE,
+  author_id INT REFERENCES authors(id) ON DELETE CASCADE,
   description TEXT,
   quantity INTEGER,
   cost_price NUMERIC,
