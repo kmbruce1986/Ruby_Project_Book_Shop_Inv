@@ -20,4 +20,11 @@ class Author
     @id = ticket['id'].to_i
   end
 
+  def self.all
+  sql = "SELECT * FROM authors"
+  authors = SqlRunner.run(sql)
+  result = authors.map {|author| Author.new(author)}
+  return result
+end
+
 end
