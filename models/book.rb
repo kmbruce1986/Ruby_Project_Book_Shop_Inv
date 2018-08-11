@@ -20,6 +20,14 @@ class Book
     return markup
   end
 
+  def stock_level_counter
+    if @quantity == 0
+      return "Out of Stock"
+    elsif @quantity <= 2
+      return "Low Stock"
+    end
+  end
+
   def save()
     sql = "INSERT INTO books (title, genre, author_id, description, quantity, cost_price, selling_price) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
     values = [@title, @genre, @author_id, @description, @quantity, @cost_price, @selling_price]
