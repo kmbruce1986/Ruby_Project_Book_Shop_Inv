@@ -13,8 +13,8 @@ class TestBook < MiniTest::Test
     assert_equal("The Burgess Boys", @book1. title)
   end
 
-  def test_can_get_tgenre
-    assert_equal("The Burgess Boys", @book1. genre)
+  def test_can_get_genre
+    assert_equal("Literary Fiction", @book1. genre)
   end
 
 
