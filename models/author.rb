@@ -16,8 +16,8 @@ class Author
   def save()
     sql = "INSERT INTO authors (first_name, last_name) VALUES ($1, $2) RETURNING id"
     values = [@first_name, @last_name]
-    ticket = SqlRunner.run(sql, values).first
-    @id = ticket['id'].to_i
+    author = SqlRunner.run(sql, values).first
+    @id = author['id'].to_i
   end
 
   def self.all()
