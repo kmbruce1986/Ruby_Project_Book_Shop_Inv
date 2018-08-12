@@ -39,6 +39,7 @@ post '/books/' do
 end
 
 get '/books/:id' do
+  @authors = Author.all
   @books = Book.find_by_id(params[:id])
   erb (:show_book)
 end
@@ -56,7 +57,7 @@ post '/books/:id/update' do
 end
 
 get '/authors/:id' do
-  @books = Book.find_by_id(params[:id])
+  @books = Book.all
   @authors = Author.find_by_id(params[:id])
   erb (:show_author)
 end
