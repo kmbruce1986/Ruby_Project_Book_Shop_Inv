@@ -42,3 +42,15 @@ get '/books/:id' do
   @books = Book.find_by_id(params[:id])
   erb (:show_book)
 end
+
+
+get '/books/:id/edit'  do
+  @books = Book.find_by_id(params[:id])
+  erb (:edit_book)
+end
+
+post '/books/:id/update' do
+  @books = Book.new(params)
+  @books.update
+  redirect '/books/'
+end

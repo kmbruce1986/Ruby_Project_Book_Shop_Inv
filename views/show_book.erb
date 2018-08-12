@@ -6,3 +6,8 @@
 <p>Cost Price: <%= @books.cost_price %></p>
 <p>Selling Price: <%= @books.selling_price %></p>
 <p>Markup: <%= @books.calculate_markup %></p>
+
+
+<form action="/books/<%= @books.id %>/edit" method="get">
+<input type="submit" value="Edit">
+</form>
