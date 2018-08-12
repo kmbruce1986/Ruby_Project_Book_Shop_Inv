@@ -37,6 +37,18 @@ book2 = Book.new({
 
 book2.save
 
+book3 = Book.new({
+  'title' => "Olive Kitteridge",
+  'genre' => "Literary Fiction",
+  'author_id' => author1.id,
+  'description' => "At times stern, at other times patient, at times perceptive, at other times in sad denial, Olive Kitteridge, a retired schoolteacher, deplores the changes in her little town of Crosby, Maine. ",
+  'quantity' => 6,
+  'cost_price' => 4,
+  'selling_price' => 10
+  })
+
+book3.save
+
 
 
 

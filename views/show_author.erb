@@ -1,7 +1,7 @@
 <p>First Name: <%= @authors.first_name() %></p>
 <p>Last Name: <%= @authors.last_name %></p>
 <p>Books: <% @authors.find_books.each do |book| %></p>
-<p> <%book.id.to_i %><%= book.title %> </p>
+<p> <%book.id.to_i %><%= book.title %>  <a href="/books/<%=book.id+1 %>"> </p>
 <% end %>
 
 <form action="/authors/<%= @authors.id %>/edit" method="get">

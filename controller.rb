@@ -56,6 +56,7 @@ post '/books/:id/update' do
 end
 
 get '/authors/:id' do
+  @books = Book.find_by_id(params[:id])
   @authors = Author.find_by_id(params[:id])
   erb (:show_author)
 end
