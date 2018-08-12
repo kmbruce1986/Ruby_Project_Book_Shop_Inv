@@ -9,3 +9,8 @@ get '/books/' do
   @books = Book.all
   erb(:books)
 end
+
+get '/authors/' do
+  @authors = Author.all
+  erb(:authors)
+end
