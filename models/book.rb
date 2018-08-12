@@ -10,8 +10,8 @@ class Book
     @author_id = options['author_id']
     @description = options['description']
     @quantity = options['quantity'].to_i
-    @cost_price = options['cost_price']
-    @selling_price = options['selling_price']
+    @cost_price = options['cost_price'].to_i
+    @selling_price = options['selling_price'].to_i
 
   end
 
