@@ -55,4 +55,13 @@ class Author
     values = [@id]
     SqlRunner.run(sql, values)
   end
+
+  def find_books()
+    sql = "SELECT books.* FROM books WHERE books.author_id = $1"
+    values = [@id]
+    books = SqlRunner.run(sql, values)
+    result = books.map {|book| Book.new(book)}
+    return result
+  end
+
 end

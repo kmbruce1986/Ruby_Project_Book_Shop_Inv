@@ -67,11 +67,11 @@ class Book
   end
 
   def find_author()
-  sql = "SELECT authors.* FROM authors WHERE id = $1"
-  values = [@author_id]
-  result = SqlRunner.run(sql, values).first
-  house = Author.new(result)
-  return house
-end
+    sql = "SELECT authors.* FROM authors WHERE id = $1"
+    values = [@author_id]
+    result = SqlRunner.run(sql, values).first
+    author = Author.new(result)
+    return author
+  end
 
 end
