@@ -1,2 +1,7 @@
 <p>First Name: <%= @authors.first_name() %></p>
 <p>Last Name: <%= @authors.last_name %></p>
+
+
+<form action="/authors/<%= @authors.id %>/edit" method="get">
+<input type="submit" value="Edit">
+</form>

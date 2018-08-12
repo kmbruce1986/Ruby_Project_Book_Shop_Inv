@@ -59,3 +59,8 @@ get '/authors/:id' do
   @authors = Author.find_by_id(params[:id])
   erb (:show_author)
 end
+
+get '/authors/:id/edit'  do
+  @authors = Author.find_by_id(params[:id])
+  erb (:edit_author)
+end
