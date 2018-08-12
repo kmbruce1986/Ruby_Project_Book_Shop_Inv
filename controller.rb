@@ -70,3 +70,9 @@ post '/authors/:id/update' do
   @authors.update
   redirect '/authors/'
 end
+
+post '/books/:id/delete' do
+  @books = Book.find_by_id(params[:id])
+  @books.delete
+  redirect '/books/'
+end
