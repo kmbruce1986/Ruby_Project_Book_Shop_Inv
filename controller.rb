@@ -37,3 +37,8 @@ post '/books/' do
   @books.save()
   redirect '/books/'
 end
+
+get '/books/:id' do
+  @books = Book.find_by_id(params[:id])
+  erb (:show_book)
+end

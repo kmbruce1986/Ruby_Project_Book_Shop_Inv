@@ -7,5 +7,7 @@
 <p>Cost Price: <%= book.cost_price %></p>
 <p>Selling Price: <%= book.selling_price %></p>
 <p>Markup: <%= book.calculate_markup %></p>
+
+<p> <a href="/books/<%= book.id %>"> Show Full Book Details </a> </p>
 <hr>
 <% end %>
