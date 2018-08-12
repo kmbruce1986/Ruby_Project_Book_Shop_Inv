@@ -25,3 +25,15 @@ post '/authors/' do
   @authors.save()
   redirect '/authors/'
 end
+
+
+get '/books/add' do
+  @books = Book.all
+  erb(:add_book)
+end
+
+post '/books/' do
+  @books = Book.new(params)
+  @books.save()
+  redirect '/books/'
+end
