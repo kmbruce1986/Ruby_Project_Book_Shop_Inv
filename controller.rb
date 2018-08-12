@@ -64,3 +64,9 @@ get '/authors/:id/edit'  do
   @authors = Author.find_by_id(params[:id])
   erb (:edit_author)
 end
+
+post '/authors/:id/update' do
+  @authors = Author.new(params)
+  @authors.update
+  redirect '/authors/'
+end
