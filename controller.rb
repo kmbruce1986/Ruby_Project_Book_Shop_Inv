@@ -54,3 +54,8 @@ post '/books/:id/update' do
   @books.update
   redirect '/books/'
 end
+
+get '/authors/:id' do
+  @authors = Author.find_by_id(params[:id])
+  erb (:show_author)
+end
