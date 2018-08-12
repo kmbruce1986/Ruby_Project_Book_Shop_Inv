@@ -25,6 +25,18 @@ book1 = Book.new({
 
 book1.save
 
+book2 = Book.new({
+  'title' => "Amy & Isabelle",
+  'genre' => "Literary Fiction",
+  'author_id' => author1.id,
+  'description' => "In her stunning first novel Amy and Isabelle, Elizabeth Strout evokes a teenager's alienation from her distant mother—and a parent's rage at the discovery of her daughter's secrets. ",
+  'quantity' => 2,
+  'cost_price' => 2,
+  'selling_price' => 8
+  })
+
+book2.save
+
 
 
 
