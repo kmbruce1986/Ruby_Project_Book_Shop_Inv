@@ -77,12 +77,13 @@ class Book
     return author
   end
   # SELECT * FROM books WHERE lower(title) LIKE '%amy%'; works in psql
-  # def self.find_by_title(params)
-  #   sql = "SELECT * FROM books WHERE title LIKE $1"
-  #   params = "%" + params + "%"
-  #   values = [params]
-  #   result = SqlRunner.run(sql, values)
-  #   return Book.new(result)
-  # end
+  def self.find_by_title(params)
+    sql = "SELECT * FROM books WHERE lower(title) LIKE $1"
+    params = "%" + params + "%"
+    values = [params]
+    books = SqlRunner.run(sql, values)
+    result = books.map {|book| Book.new(book)}
+    return result
+  end
 
 end

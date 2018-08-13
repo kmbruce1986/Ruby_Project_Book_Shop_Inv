@@ -64,11 +64,13 @@ class Author
   end
 
 # not sure how this should work yet.
-  # def self.find_by_name(first_name)
-  #   sql = "SELECT * FROM authors WHERE first_name LIKE %$1%"
-  #   values = [first_name]
-  #   result = SqlRunner.run(sql, values)
-  #   return result = Author.new(result)
-  # end
+  def self.find_by_name(params)
+    sql = "SELECT * FROM authors WHERE lower(name) LIKE $1"
+    params = "%" + params + "%"
+    values = [params]
+    authors = SqlRunner.run(sql, values)
+    result = authors.map {|author| Author.new(author)}
+    return result
+  end
 
 end
