@@ -14,6 +14,20 @@ get '/books/add' do
   erb(:"book/add_book")
 end
 
+get '/books/search' do
+  erb (:"book/search")
+end
+
+get '/books/search_results' do
+@books = Book.all
+if params[:search]
+  @books = Book.find_by_title(params[:search])
+# else
+#   @books = Book.all
+end
+erb (:"book/results")
+end
+
 post '/books' do
   @books = Book.new(params)
   @books.save()
