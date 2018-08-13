@@ -1,22 +1,20 @@
 
 <table>
   <tr>
-    <th>Title:</th>
+    <th>Title</th>
     <th></th>
-    <th>Genre:</th>
+    <th>Genre</th>
     <th></th>
-    <th>Author:</th>
+    <th>Author</th>
     <th></th>
-    <th>Quantity:</th>
+    <th>Quantity</th>
     <th></th>
-    <th>Stock Level:</th>
+    <th>Stock Level</th>
     <th></th>
-    <th>Selling Price:</th>
+    <th>Selling Price</th>
   </tr>
   <% @books.each do |book| %>
 <tr>
-
-
 
 <td><%= book.title %></td>
 <td></td>
@@ -34,7 +32,6 @@
 <td><%= book.selling_price %></td>
 <td></td>
 <td> <a href="/books/<%= book.id %>"> Show Full Book Details </a> </td>
-<hr>
 <!-- <p>Markup: <%= book.calculate_markup %></p> -->
 </tr>
 
