@@ -76,12 +76,13 @@ class Book
     author = Author.new(result)
     return author
   end
-
-  # def self.find_by_title(title_search)
-  #   sql = "SELECT * FROM books WHERE title LIKE '%$1%'"
-  #   values = [title_search]
+  # SELECT * FROM books WHERE lower(title) LIKE '%amy%'; works in psql
+  # def self.find_by_title(params)
+  #   sql = "SELECT * FROM books WHERE title LIKE $1"
+  #   params = "%" + params + "%"
+  #   values = [params]
   #   result = SqlRunner.run(sql, values)
-  #   return result = Book.new(result)
+  #   return Book.new(result)
   # end
 
 end
