@@ -1,0 +1,10 @@
+<% if @authors %>
+<table>
+  <td>Name</td>
+  <% @authors.each do |author| %>
+  <tr><td><a href="/authors/<%= author.id %>"><%= author.name %></a>   </td>
+  <% end %>
+  <% else %>
+  <p>There are no Authors containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+</table>
