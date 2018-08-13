@@ -11,6 +11,8 @@
   </head>
   <body>
 <nav>
+<main class="flex flex--row">
+
 
     <ul> <a href="/books">All Books</a> </ul>
     <ul> <a href="/books/search">Search Books</a> </ul>
@@ -34,9 +36,12 @@
               <div class="cell"> <a href="/authors/search">Search Authors</a </div>
             </div>
  -->
-
+</main>
   </nav>
+<section id="main_body">
   <%= yield %>
+  </section>
+
 
   </body>
 </html>

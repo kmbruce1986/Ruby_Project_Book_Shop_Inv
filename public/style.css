@@ -31,11 +31,16 @@ td {
 font-family: 'Montserrat', sans-serif;
 padding: 10px;
 }
-/*
-nav {
-  background-color: indianred;
-} */
 
+nav {
+  padding-right: 30px;
+  align-content: flex-start;
+}
+
+# main_body {
+padding-left: 30px;
+align-content: flex-end;
+}
 
 .grid {
   border: 1px solid black;
@@ -53,6 +58,13 @@ nav {
   border: 1px solid black;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+.flex--row {
+  flex-direction: row;
 }
 
 /* font family stuff
