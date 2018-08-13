@@ -12,6 +12,18 @@ author1 = Author.new({
 
 author1.save
 
+author2 = Author.new({
+  'name' => "J.K. Rowling"
+})
+
+author2.save
+
+author3 = Author.new({
+  'name' => "Chloe Benjamin"
+})
+
+author3.save
+
 book1 = Book.new({
   'title' => "The Burgess Boys",
   'genre' => "Literary Fiction",

@@ -1,9 +1,41 @@
 body {
-  background-color: lightblue;
+  background-color: antiquewhite;
 }
-li {
-  font-style: italic;
+ul {
+  font-family: 'Raleway', sans-serif;
+  color: indianred;
 }
+
+p {
+
+      font-family: 'Raleway', sans-serif;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+th {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+}
+
+td {
+font-family: 'Montserrat', sans-serif;
+padding: 10px;
+}
+/*
+nav {
+  background-color: indianred;
+} */
+
 
 .grid {
   border: 1px solid black;
@@ -12,6 +44,7 @@ li {
 
 .grid-row {
   display: flex;
+  font-family: 'Raleway', sans-serif;
 }
 
 .cell {
@@ -19,4 +52,9 @@ li {
   padding: 10px;
   border: 1px solid black;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
 }
+
+/* font family stuff
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif; */
