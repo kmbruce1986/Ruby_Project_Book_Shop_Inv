@@ -64,12 +64,12 @@ class Author
     return result
   end
 
-# not sure how this should work yet.  
-  # def self.find_by_name(name)
-  #   sql = "SELECT * FROM authors WHERE first_name = $1"
-  #   values = [name]
+# not sure how this should work yet.
+  # def self.find_by_name(first_name)
+  #   sql = "SELECT * FROM authors WHERE first_name LIKE %$1%"
+  #   values = [first_name]
   #   result = SqlRunner.run(sql, values)
-  #   return author = Author.new(result)
+  #   return result = Author.new(result)
   # end
 
 end
