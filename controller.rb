@@ -5,12 +5,12 @@ require_relative( 'models/book.rb' )
 
 also_reload( 'models/*' )
 
-get '/books/' do
+get '/books' do
   @books = Book.all
   erb(:books)
 end
 
-get '/authors/' do
+get '/authors' do
   @authors = Author.all
   erb(:authors)
 end
@@ -20,10 +20,10 @@ get '/authors/add' do
   erb(:add_author)
 end
 
-post '/authors/' do
+post '/authors' do
   @authors = Author.new(params)
   @authors.save()
-  redirect '/authors/'
+  redirect '/authors'
 end
 
 
@@ -32,10 +32,10 @@ get '/books/add' do
   erb(:add_book)
 end
 
-post '/books/' do
+post '/books' do
   @books = Book.new(params)
   @books.save()
-  redirect '/books/'
+  redirect '/books'
 end
 
 get '/books/:id' do
@@ -53,7 +53,7 @@ end
 post '/books/:id/update' do
   @books = Book.new(params)
   @books.update
-  redirect '/books/'
+  redirect '/books'
 end
 
 get '/authors/:id' do
@@ -70,17 +70,17 @@ end
 post '/authors/:id/update' do
   @authors = Author.new(params)
   @authors.update
-  redirect '/authors/'
+  redirect '/authors'
 end
 
 post '/books/:id/delete' do
   @books = Book.find_by_id(params[:id])
   @books.delete
-  redirect '/books/'
+  redirect '/books'
 end
 
 post '/authors/:id/delete' do
   @authors = Author.find_by_id(params[:id])
   @authors.delete
-  redirect '/authors/'
+  redirect '/authors'
 end
