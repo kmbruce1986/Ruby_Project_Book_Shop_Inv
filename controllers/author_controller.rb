@@ -14,6 +14,21 @@ get '/authors/add' do
   erb(:"author/add_author")
 end
 
+get '/authors/search' do
+  erb (:"author/search")
+end
+
+get '/authors/search_results' do
+@authors = Author.all
+if params[:search]
+  @authors = Author.find_by_name(params[:search])
+# else
+#   @authors = Author.all
+end
+erb (:"author/results")
+end
+
+
 post '/authors' do
   @authors = Author.new(params)
   @authors.save()
@@ -41,8 +56,4 @@ post '/authors/:id/delete' do
   @authors = Author.find_by_id(params[:id])
   @authors.delete
   redirect 'authors'
-end
-
-get '/authors/search' do
-  erb (:"author/search")
 end
