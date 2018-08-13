@@ -25,6 +25,9 @@ class Book
       return "Out of Stock"
     elsif @quantity <= 2
       return "Low Stock"
+    elsif @quantity >= 3 && @quantity <= 8
+      return "Stock Level Good"
+    else return "Stock Level High"
     end
   end
 
