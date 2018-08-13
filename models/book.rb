@@ -86,4 +86,12 @@ class Book
     return result
   end
 
+  def self.find_by_genre(genre)
+    sql = "SELECT * FROM books WHERE genre = $1"
+    values = [genre]
+    books = SqlRunner.run(sql, values)
+    result = books.map {|book| Book.new(book)}
+    return result
+  end
+
 end

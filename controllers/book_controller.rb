@@ -22,8 +22,8 @@ get '/books/search_results' do
 @books = Book.all
 if params[:search]
   @books = Book.find_by_title(params[:search])
-# else
-#   @books = Book.all
+else
+  @books = Book.all
 end
 erb (:"book/results")
 end
