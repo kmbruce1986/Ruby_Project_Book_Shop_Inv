@@ -42,3 +42,7 @@ post '/authors/:id/delete' do
   @authors.delete
   redirect 'authors'
 end
+
+get '/authors/search' do
+  erb (:"author/search")
+end

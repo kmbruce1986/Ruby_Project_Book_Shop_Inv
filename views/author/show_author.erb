@@ -7,6 +7,6 @@
 <input type="submit" value="Edit">
 </form>
 
-<form action="/authors/<%= @authors.id %>/delete" method="post">
+<form onsubmit="return confirm('Are you sure you want to delete this author?')" action="/authors/<%= @authors.id %>/delete" method="post">
 <input type="submit" value="Delete">
 </form>
