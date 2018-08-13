@@ -4,22 +4,21 @@ require_relative('../db/sql_runner.rb')
 class Author
 
   attr_reader :id
-  attr_accessor :first_name, :last_name
+  attr_accessor :name
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @first_name = options['first_name']
-    @last_name = options['last_name']
+    @name = options['name']
 
   end
 
-  def pretty_name
-    return "#{first_name} #{last_name}"
-  end
+  # def pretty_name
+  #   return "#{first_name} #{last_name}"
+  # end
 
   def save()
-    sql = "INSERT INTO authors (first_name, last_name) VALUES ($1, $2) RETURNING id"
-    values = [@first_name, @last_name]
+    sql = "INSERT INTO authors (name) VALUES ($1) RETURNING id"
+    values = [@name]
     author = SqlRunner.run(sql, values).first
     @id = author['id'].to_i
   end
@@ -39,8 +38,8 @@ class Author
   end
 
   def update()
-    sql = "UPDATE authors SET (first_name, last_name) = ($1, $2) WHERE id = $3"
-    values = [@first_name, @last_name, @id]
+    sql = "UPDATE authors SET (name) = ($1) WHERE id = $2"
+    values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 

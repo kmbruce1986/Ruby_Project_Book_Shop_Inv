@@ -1,5 +1,4 @@
-<p>First Name: <%= @authors.first_name() %></p>
-<p>Last Name: <%= @authors.last_name %></p>
+<p>Name: <%= @authors.name() %></p>
 <p>Books: <% @authors.find_books.each do |book| %></p>
 <p> <a href="/books/<%=book.id %>"><%= book.title %>   </p>
 <% end %>

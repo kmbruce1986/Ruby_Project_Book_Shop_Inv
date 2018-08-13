@@ -7,8 +7,7 @@ Book.delete_all
 Author.delete_all
 
 author1 = Author.new({
-  'first_name' => "Elizabeth",
-  'last_name' => "Strout"
+  'name' => "Elizabeth Strout"
 })
 
 author1.save

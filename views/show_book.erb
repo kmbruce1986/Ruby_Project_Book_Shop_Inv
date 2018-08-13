@@ -1,7 +1,7 @@
 <p>Title: <%= @books.title() %></p>
 <p>Genre: <%= @books.genre %></p>
 <p>Author(id): <%= @books.author_id %></p>
-<p>Author Name: <a href="/authors/<%=@books.author_id %>"><%= @books.find_author.pretty_name %></a> </p>
+<p>Author Name: <a href="/authors/<%=@books.author_id %>"><%= @books.find_author.name %></a> </p>
 <p>Description: <%= @books.description %></p>
 <p>Quantity: <%= @books.quantity %></p>
 <p>Cost Price: <%= @books.cost_price %></p>
