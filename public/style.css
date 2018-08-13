@@ -4,3 +4,19 @@ body {
 li {
   font-style: italic;
 }
+
+.grid {
+  border: 1px solid black;
+
+}
+
+.grid-row {
+  display: flex;
+}
+
+.cell {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: left;
+}
