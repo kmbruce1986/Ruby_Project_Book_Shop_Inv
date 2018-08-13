@@ -1,14 +1,14 @@
 <% @books.each do |book| %>
 <p>Title: <%= book.title %></p>
 <p>Genre: <%= book.genre %></p>
-<p>Author(id): <%= book.author_id %></p>
+<!-- <p>Author(id): <%= book.author_id %></p> -->
 <p>Author Name: <%= book.find_author.name %></p>
-<p>Description: <%= book.description %></p>
+<!-- <p>Description: <%= book.description %></p> -->
 <p>Quantity: <%= book.quantity %></p>
 <p>Stock Level: <%= book.stock_level_counter %></p>
-<p>Cost Price: <%= book.cost_price %></p>
+<!-- <p>Cost Price: <%= book.cost_price %></p> -->
 <p>Selling Price: <%= book.selling_price %></p>
-<p>Markup: <%= book.calculate_markup %></p>
+<!-- <p>Markup: <%= book.calculate_markup %></p> -->
 
 <p> <a href="/books/<%= book.id %>"> Show Full Book Details </a> </p>
 <hr>
