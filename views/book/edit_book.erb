@@ -1,18 +1,59 @@
 <form action="/books/<%= @books.id %>/update" method="post">
+<table>
+<tr>
+  <th><label for="title"> Title: </label></th>
+  <td><input id="title" type="text" name="title" value="<%= @books.title  %>"required></td>
+</tr>
 
-  <label for="title"> Title: </label>
+<tr>
+  <td><label for="genre"> Genre: </label></td>
+  <th>  <input id="genre" type="text" name="genre" value="<%= @books.genre  %>" required></th>
+</tr>
+
+<tr>
+  <td><label for="author"> Author: </label></td>
+  <th>    <select id="author" name="author_id">
+        <% @authors.each do |author|%>
+        <option value="<%= author.id.to_i %>"><%= author.name %></option>
+        <% end %>
+      </select></th>
+</tr>
+
+<tr>
+  <td><label for="description"> Blurb: </label></td>
+  <th><input id="description" type="text" name="description" value="<%= @books.description  %>" required></th>
+</tr>
+
+<tr>
+  <td><label for="quantity"> Quantity: </label></td>
+  <th><input id="quantity" type="text" name="quantity" value="<%= @books.quantity  %>" required></th>
+</tr>
+
+<tr>
+  <td><label for="cost_price"> Cost Price: </label></td>
+  <th><input id="cost_price" type="text" name="cost_price" value="<%= @books.cost_price  %>" required></th>
+</tr>
+
+<tr>
+  <td><label for="selling_price"> Selling Price: </label></td>
+  <th><input id="selling_price" type="text" name="selling_price" value="<%= @books.selling_price  %>" required></th>
+</tr>
+
+
+  <input type="submit" value="Save Changes">
+</table>
+</form>
+
+  <!-- <label for="title"> Title: </label>
   <input id="title" type="text" name="title" value="<%= @books.title  %>"required>
 
   <label for="genre"> Genre: </label>
   <input id="genre" type="text" name="genre" value="<%= @books.genre  %>" required>
 
-  <!-- <label for="author"> Author(id): </label>
-  <input id="author" type="text" name="author_id" value="<%= @books.author_id  %>" required>
-
   <label for="author"> Author Name: </label>
   <input id="author" type="text" value="<%= @books.find_author.name  %>"> -->
 
-  <label for="author"> Author: </label>
+  <!-- <label for="author"> Author: </label>
     <select id="author" name="author_id">
       <% @authors.each do |author|%>
       <option value="<%= author.id.to_i %>"><%= author.name %></option>
@@ -29,8 +70,4 @@
   <input id="cost_price" type="text" name="cost_price" value="<%= @books.cost_price  %>" required>
 
   <label for="selling_price"> Selling Price: </label>
-  <input id="selling_price" type="text" name="selling_price" value="<%= @books.selling_price  %>" required>
-
-  <input type="submit" value="Save Changes">
-
-</form>
+  <input id="selling_price" type="text" name="selling_price" value="<%= @books.selling_price  %>" required> --> 
