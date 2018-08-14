@@ -31,11 +31,13 @@ class Book
     end
   end
 
-  # def stock_level_to_be_reviewed
-  # if stock_level_counter != "Stock Level Good"
-  #     return
-  #   end
-  # end
+
+  def self.stock_level_return(quantity)
+    sql = "SELECT * FROM books WHERE quantity = $1"
+    values = [quantity]
+    books = SqlRunner.run(sql, values)
+    return books.map {|book| Book.new(book)}
+  end
 
   def stock_level_counter_colour
     if @quantity == 0

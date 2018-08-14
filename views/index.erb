@@ -1,4 +1,4 @@
-<h1>Bruce Books</h1>
+<h1>Review Stock Levels</h1>
 <!-- this is the main page -->
 
 <table>
@@ -18,7 +18,67 @@
     <th>Details</th>
     <th></th>
   </tr>
-  <% @books.each do |book| %>
+  <% @books1.each do |book| %>
+<tr>
+
+<td><a href="/books/<%= book.id %>"><%= book.title %></td>
+<td></td>
+<td><%= book.genre %></td>
+<td></td>
+<td><a href="/authors/<%= book.author_id %>"><%= book.find_author.name %></a></td>
+<td></td>
+<td class= "book_detail_number"><%= book.quantity %></td>
+<td></td>
+<td class="<%= book.stock_level_counter_colour %>"><%= book.stock_level_counter %></td>
+<td></td>
+<td class= "book_detail_number"><%= book.selling_price %></td>
+<td></td>
+<td> <a href="/books/<%= book.id %>"> Details </a> </td>
+<td></td>
+</tr>
+
+<% end %>
+<% @books2.each do |book| %>
+<tr>
+
+<td><a href="/books/<%= book.id %>"><%= book.title %></td>
+<td></td>
+<td><%= book.genre %></td>
+<td></td>
+<td><a href="/authors/<%= book.author_id %>"><%= book.find_author.name %></a></td>
+<td></td>
+<td class= "book_detail_number"><%= book.quantity %></td>
+<td></td>
+<td class="<%= book.stock_level_counter_colour %>"><%= book.stock_level_counter %></td>
+<td></td>
+<td class= "book_detail_number"><%= book.selling_price %></td>
+<td></td>
+<td> <a href="/books/<%= book.id %>"> Details </a> </td>
+<td></td>
+</tr>
+
+<% end %>
+<% @books3.each do |book| %>
+<tr>
+
+<td><a href="/books/<%= book.id %>"><%= book.title %></td>
+<td></td>
+<td><%= book.genre %></td>
+<td></td>
+<td><a href="/authors/<%= book.author_id %>"><%= book.find_author.name %></a></td>
+<td></td>
+<td class= "book_detail_number"><%= book.quantity %></td>
+<td></td>
+<td class="<%= book.stock_level_counter_colour %>"><%= book.stock_level_counter %></td>
+<td></td>
+<td class= "book_detail_number"><%= book.selling_price %></td>
+<td></td>
+<td> <a href="/books/<%= book.id %>"> Details </a> </td>
+<td></td>
+</tr>
+
+<% end %>
+<% @books4.each do |book| %>
 <tr>
 
 <td><a href="/books/<%= book.id %>"><%= book.title %></td>
