@@ -5,8 +5,15 @@
   <label for="genre"> Genre: </label>
   <input id="genre" type="text" name="genre" required>
 
-  <label for="author"> Author(id): </label>
-  <input id="author" type="text" name="author_id" required>
+  <!-- <label for="author"> Author(id): </label>
+  <input id="author" type="text" name="author_id" required> -->
+
+  <label for="author"> Author: </label>
+    <select id="author" name="author_id">
+      <% @authors.each do |author|%>
+      <option value="<%= author.id.to_i %>"><%= author.name %></option>
+      <% end %>
+    </select>
 
   <label for="description"> Blurb: </label>
   <input id="description" type="text" name="description" required>
