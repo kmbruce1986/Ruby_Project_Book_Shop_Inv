@@ -59,20 +59,31 @@ nav {
 
 .out_of_stock {
   color: red;
+  font-weight: bold;
 }
 
 .low_stock {
   color: orange;
+  font-weight: bold;
 }
 
 .stock_level_high {
   color: green;
+  font-weight: bold;
 }
 
 .container {
   display: flex;
 }
-/* 
+
+.book_detail_number {
+  text-align: center;
+}
+
+.main_header {
+  font-size: 40px;
+}
+/*
 .grid {
   border: 1px solid black;
 
