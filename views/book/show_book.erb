@@ -1,3 +1,5 @@
+<h1>Book Information</h1>
+
 <!-- <p>Title: <%= @books.title() %></p>
 <p>Genre: <%= @books.genre %></p>
 <p>Author(id): <%= @books.author_id %></p>
@@ -10,6 +12,52 @@
 <p>Markup: <%= @books.calculate_markup %></p>
 -->
 
+<table>
+  <tr>
+    <th>Title</th>
+    <td><%= @books.title() %></td>
+  </tr>
+  <tr>
+    <th>Genre</th>
+    <td><%= @books.genre %></td>
+  </tr>
+
+  <tr>
+    <th>Author</th>
+    <td><a href="/authors/<%=@books.author_id %>"><%= @books.find_author.name %></a></td>
+  </tr>
+
+  <tr>
+    <th>Description</th>
+    <td><%= @books.description %></td>
+  </tr>
+
+  <tr>
+    <th>Quantity</th>
+    <td><%= @books.quantity %></td>
+  </tr>
+
+  <tr>
+    <th>Stock Level</th>
+    <td><%= @books.stock_level_counter %></td>
+  </tr>
+
+  <tr>
+    <th>Cost Price</th>
+    <td><%= @books.cost_price %></td>
+  </tr>
+  <tr>
+    <th>Selling Price</th>
+    <td><%= @books.selling_price %></td>
+  </tr>
+
+  <tr>
+    <th>Markup</th>
+    <td><%= @books.calculate_markup %></td>
+  </tr>
+
+</table>
+
 <form action="/books/<%= @books.id %>/edit" method="get">
   <input type="submit" value="Edit">
 </form>
@@ -18,7 +66,7 @@
   <input type="submit" value="Delete">
 </form>
 
-<div class="grid">
+<!-- <div class="grid">
   <div class="grid-row">
     <div class="cell">Title</div>
     <div class="cell"><%= @books.title() %></div>
@@ -69,4 +117,4 @@
     <div class="cell"><%= @books.calculate_markup %></div>
   </div>
 
-</div>
+</div> -->
