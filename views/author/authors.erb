@@ -1,4 +1,10 @@
-<% @authors.each do |author| %>
-<p>Name: <%= author.name %> <a href="/authors/<%= author.id %>"> Show Full Author Details </a> </p>
-<hr>
-<% end %>
+<h1>All Authors</h1>
+<table>
+  <% @authors.each do |author| %>
+  <tr>
+    <th>Name:</th>
+    <td><%= author.name %></td>
+    <td><a href="/authors/<%= author.id %>"> Show Full Author Details </a></td>
+  </tr>
+  <% end %>
+</table>
