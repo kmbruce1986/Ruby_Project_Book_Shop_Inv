@@ -1,15 +1,16 @@
 body {
   background-color: antiquewhite;
 }
-ul {
+li {
   font-family: 'Raleway', sans-serif;
   color: indianred;
+  list-style-type: none;
 }
 
 p {
-
   font-family: 'Raleway', sans-serif;
 }
+
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -42,12 +43,12 @@ td {
 
 nav {
   padding-right: 30px;
-  align-content: flex-start;
+  align-self: flex-start;
+
 }
 
 
 # main_body {
-  padding-left: 30px;
   flex-direction: column;
 }
 
@@ -68,18 +69,20 @@ nav {
   color: green;
 }
 
-.stock_level_good
-
+.container {
+  display: flex;
+}
+/* 
 .grid {
   border: 1px solid black;
 
-}
+} */
 
-.grid-row {
+/* .grid-row {
   display: flex;
   font-family: 'Raleway', sans-serif;
-}
-
+} */
+/*
 .cell {
   flex: 1;
   padding: 10px;
@@ -93,7 +96,7 @@ nav {
 }
 .flex-column {
   flex-direction: column;
-}
+} */
 
 
 /* font family stuff
