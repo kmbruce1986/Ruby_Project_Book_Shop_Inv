@@ -45,16 +45,19 @@ end
 erb (:"book/results_genre")
 end
 
-post '/books/add_another' do
-  @books = Book.new(params)
-  @books.save()
-  redirect '/books/add'
-end
-
+# post '/books/add_another' do
+#   @authors = Author.all
+#   @books = Book.new(params)
+#   @books.save()
+#   redirect '/books/add'
+#   # erb(:"book/add_book")
+# end
 post '/books' do
+  @authors = Author.all
   @books = Book.new(params)
   @books.save()
-  redirect '/books'
+  # redirect '/books'
+  erb(:"book/add_book")
 end
 
 

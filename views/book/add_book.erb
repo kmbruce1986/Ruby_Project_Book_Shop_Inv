@@ -1,51 +1,54 @@
 <h1>Add Book</h1>
 <form action="/books" method="post">
-<table>
+  <table>
 
-<tr>
-  <th><label for="title"> Title: </label></th>
-  <td><input id="title" type="text" name="title" required></td>
-</tr>
+    <tr>
+      <th><label for="title"> Title: </label></th>
+      <td><input id="title" type="text" name="title" required></td>
+    </tr>
 
-<tr>
-  <th><label for="genre"> Genre: </label></th>
-  <td><input id="genre" type="text" name="genre" required></td>
-</tr>
+    <tr>
+      <th><label for="genre"> Genre: </label></th>
+      <td><input id="genre" type="text" name="genre" required></td>
+    </tr>
 
-<tr>
-  <th><label for="author"> Author: </label></th>
-  <td><select id="author" name="author_id">
-    <% @authors.each do |author|%>
-    <option value="<%= author.id.to_i %>"><%= author.name %></option>
-    <% end %>
-  </select></td>
-</tr>
+    <tr>
+      <th><label for="author"> Author: </label></th>
+      <td><select id="author" name="author_id">
+        <% @authors.each do |author|%>
+        <option value="<%= author.id.to_i %>"><%= author.name %></option>
+        <% end %>
+      </select></td>
+    </tr>
 
-<tr>
-  <th><label for="description"> Blurb: </label></th>
-  <td><input id="description" type="text" name="description" required></td>
-</tr>
+    <tr>
+      <th><label for="description"> Blurb: </label></th>
+      <td><input id="description" type="text" name="description" required></td>
+    </tr>
 
-<tr>
-  <th><label for="quantity"> Quantity: </label></th>
-  <td><input id="quantity" type="text" name="quantity" required></td>
-</tr>
+    <tr>
+      <th><label for="quantity"> Quantity: </label></th>
+      <td><input id="quantity" type="text" name="quantity" required></td>
+    </tr>
 
-<tr>
-  <th><label for="cost_price"> Cost Price: </label></th>
-  <td><input id="cost_price" type="text" name="cost_price" required></td>
-</tr>
+    <tr>
+      <th><label for="cost_price"> Cost Price: </label></th>
+      <td><input id="cost_price" type="text" name="cost_price" required></td>
+    </tr>
 
-<tr>
-  <th><label for="selling_price"> Selling Price: </label><input id="selling_price" type="text" name="selling_price" required></th>
-  <td></td>
-</tr>
+    <tr>
+      <th><label for="selling_price"> Selling Price: </label><input id="selling_price" type="text" name="selling_price" required></th>
+      <td></td>
+    </tr>
 
+    <button onclick="location.href= '/books'"action="/books"type="submit" value="Create" type="button" name="button">Create</button>
 
-</table>
-  <input type="submit" value="Create">
-</form>
+    <!-- <button onclick="location.href= '/books/add'"action="/books"type="submit" value="Create" type="button" name="button">CreateATest</button> -->
 
-<form class= "create_plus_button" action="/books/add_another" method="post">
-  <input type="submit" value="Create and Add Another">
-</form>
+<!-- <input action="/books"type="submit" value="Create">
+  </form>
+  </table>
+
+  <form class="" action="/books/add_another" method="post">
+      <input type="submit" value="Create and Add Another" >
+  </form> -->
