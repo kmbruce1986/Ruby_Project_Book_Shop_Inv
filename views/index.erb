@@ -1,2 +1,41 @@
 <h1>Bruce Books</h1>
 <!-- this is the main page -->
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th>Genre</th>
+    <th></th>
+    <th>Author</th>
+    <th></th>
+    <th>Quantity</th>
+    <th></th>
+    <th>Stock Level</th>
+    <th></th>
+    <th>Selling Price</th>
+    <th></th>
+    <th>Details</th>
+    <th></th>
+  </tr>
+  <% @books.each do |book| %>
+<tr>
+
+<td><a href="/books/<%= book.id %>"><%= book.title %></td>
+<td></td>
+<td><%= book.genre %></td>
+<td></td>
+<td><a href="/authors/<%= book.author_id %>"><%= book.find_author.name %></a></td>
+<td></td>
+<td class= "book_detail_number"><%= book.quantity %></td>
+<td></td>
+<td class="<%= book.stock_level_counter_colour %>"><%= book.stock_level_counter %></td>
+<td></td>
+<td class= "book_detail_number"><%= book.selling_price %></td>
+<td></td>
+<td> <a href="/books/<%= book.id %>"> Details </a> </td>
+<td></td>
+</tr>
+
+<% end %>
+</table>

@@ -31,6 +31,12 @@ class Book
     end
   end
 
+  # def stock_level_to_be_reviewed
+  # if stock_level_counter != "Stock Level Good"
+  #     return
+  #   end
+  # end
+
   def stock_level_counter_colour
     if @quantity == 0
       return "out_of_stock"
