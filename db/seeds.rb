@@ -60,6 +60,41 @@ book3 = Book.new({
 
 book3.save
 
+book4 = Book.new({
+  'title' => "Harry Potter and the Philosopher's Stone",
+  'genre' => "Fantasy",
+  'author_id' => author2.id,
+  'description' => "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. ",
+  'quantity' => 10,
+  'cost_price' => 5,
+  'selling_price' => 10
+  })
+
+book4.save
+
+book5 = Book.new({
+  'title' => "Harry Potter and the Chamber of Secrets",
+  'genre' => "Fantasy",
+  'author_id' => author2.id,
+  'description' => "During a dinner party hosted by his uncle and aunt, Harry is visited by Dobby, a house-elf. Dobby warns Harry not to return to Hogwarts, the magical school for wizards that Harry attended the previous year. ",
+  'quantity' => 4,
+  'cost_price' => 4.5,
+  'selling_price' => 11
+  })
+
+book5.save
+
+book6 = Book.new({
+  'title' => "The Immortalists",
+  'genre' => "Literary Fiction",
+  'author_id' => author3.id,
+  'description' => "If you knew the date of your death, how would you live your life? It's 1969 in New York City's Lower East Side, and word has spread of the arrival of a mystical woman, a traveling psychic who claims to be able to tell anyone the day they will die.",
+  'quantity' => 9,
+  'cost_price' => 2.5,
+  'selling_price' => 9.5
+  })
+
+book6.save
 
 
 
