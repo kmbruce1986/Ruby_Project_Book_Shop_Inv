@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/book.rb' )
+require_relative( '../models/author.rb' )
 
 also_reload( '../models/*' )
 
@@ -14,6 +15,7 @@ get '/books/add' do
   @books = Book.all
   erb(:"book/add_book")
 end
+
 
 get '/books/search' do
   erb (:"book/search")
@@ -29,11 +31,19 @@ end
 erb (:"book/results")
 end
 
+post '/books/add_another' do
+  @books = Book.new(params)
+  @books.save()
+  redirect '/books/add'
+end
+
 post '/books' do
   @books = Book.new(params)
   @books.save()
   redirect '/books'
 end
+
+
 
 get '/books/:id' do
   @authors = Author.all
