@@ -20,7 +20,7 @@
 <td></td>
 <td><%= book.genre %></td>
 <td></td>
-<td><%= book.find_author.name %></td>
+<td><a href="/authors/<%= book.author_id %>"><%= book.find_author.name %></a></td>
 <td></td>
 <td><%= book.quantity %></td>
 <td></td>
