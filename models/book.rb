@@ -10,14 +10,14 @@ class Book
     @author_id = options['author_id']
     @description = options['description']
     @quantity = options['quantity'].to_i
-    @cost_price = options['cost_price'].to_i
-    @selling_price = options['selling_price'].to_i
+    @cost_price = options['cost_price'].to_f
+    @selling_price = options['selling_price'].to_f
 
   end
 
   def calculate_markup()
     markup = @selling_price - @cost_price
-    return markup
+    return markup.to_f
   end
 
   def stock_level_counter
