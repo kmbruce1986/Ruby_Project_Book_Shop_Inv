@@ -1,0 +1,11 @@
+<h1>Search Results</h1>
+<% if @books.length != 0 %>
+<table>
+  <td>Title</td>
+  <% @books.each do |book| %>
+  <tr><td><a href="/books/<%= book.id %>"><%= book.title %></a>   </td>
+  <% end %>
+  <% else %>
+  <p>There are no Books in this genre.</p>
+  <% end %>
+</table>

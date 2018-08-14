@@ -31,6 +31,20 @@ end
 erb (:"book/results")
 end
 
+get '/books/search_genre' do
+  erb (:"book/search_genre")
+end
+
+get '/books/search_genre_results' do
+@books = Book.all
+if params[:search]
+  @books = Book.find_by_genre(params[:search])
+else
+  @books = Book.all
+end
+erb (:"book/results_genre")
+end
+
 post '/books/add_another' do
   @books = Book.new(params)
   @books.save()

@@ -47,6 +47,11 @@ nav {
 
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 
 # main_body {
   flex-direction: column;
