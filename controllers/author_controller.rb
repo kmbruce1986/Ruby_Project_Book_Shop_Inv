@@ -32,7 +32,7 @@ end
 post '/authors' do
   @authors = Author.new(params)
   @authors.save()
-  redirect 'authors'
+  redirect 'authors/add'
 end
 
 get '/authors/:id' do
