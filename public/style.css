@@ -15,10 +15,12 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   color: indianred;
+  padding-top: 40px;
 }
 
 label {
   font-family: 'Montserrat', sans-serif;
+  color: indianred;
 }
 
 table {
@@ -32,14 +34,14 @@ th {
   text-align: left;
   padding: 10px;
   font-size: 20px;
-    border-bottom: 1px solid indianred;
+  color: indianred;
 
 }
 
 td {
   font-family: 'Montserrat', sans-serif;
   padding: 10px;
-  border-bottom: 1px solid indianred;
+  border-top: 1px solid indianred;
 }
 
 nav {
@@ -53,9 +55,18 @@ a {
   text-decoration: none;
 }
 
+a.main_header {
+  font-weight: bold;
+}
 
-# main_body {
+td.no_border {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+}
+
+ # main_body {
   flex-direction: column;
+  margin-left: 50px;
 }
 
 # main_header {

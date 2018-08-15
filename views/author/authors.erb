@@ -3,10 +3,14 @@
 <button class="myButton_search" onclick="location.href= '/authors/search'"type="button" name="button">Search Authors</button>
 
 <table>
+  <tr>
+    <th></th>
+
+  </tr>
   <% @authors.each do |author| %>
   <tr>
-    <td><a href="/authors/<%= author.id %>"><%= author.name %></td>
-    <td><a href="/authors/<%= author.id %>"> Details </a></td>
+    <td class="no_border"><a href="/authors/<%= author.id %>"><%= author.name %></td>
+    <td class="no_border"><a href="/authors/<%= author.id %>"> Details </a></td>
   </tr>
   <% end %>
 </table>

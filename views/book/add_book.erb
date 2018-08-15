@@ -4,43 +4,51 @@
 
     <tr>
       <th><label for="title"> Title: </label></th>
-      <td><input id="title" type="text" name="title" required></td>
+      <th><input id="title" type="text" name="title" required></th>
     </tr>
 
     <tr>
       <th><label for="genre"> Genre: </label></th>
-      <td><input id="genre" type="text" name="genre" required></td>
+      <th><input id="genre" type="text" name="genre" required></th>
     </tr>
 
     <tr>
       <th><label for="author"> Author: </label></th>
-      <td><select id="author" name="author_id">
+      <th><select id="author" name="author_id">
         <% @authors.each do |author|%>
         <option value="<%= author.id.to_i %>"><%= author.name %></option>
         <% end %>
-      </select></td>
+      </select></th>
     </tr>
 
     <tr>
       <th><label for="description"> Blurb: </label></th>
-      <td><input id="description" type="text" name="description" size="100"required></td>
+      <th><input id="description" type="text" name="description" size="100"required></th>
     </tr>
 
     <tr>
       <th><label for="quantity"> Quantity: </label></th>
-      <td><input id="quantity" type="text" name="quantity" required></td>
+      <th><input id="quantity" type="text" name="quantity" required></th>
     </tr>
 
     <tr>
       <th><label for="cost_price"> Cost Price: </label></th>
-      <td><input id="cost_price" type="text" name="cost_price" required></td>
+      <th><input id="cost_price" type="text" name="cost_price" required></th>
     </tr>
 
     <tr>
-      <th><label for="selling_price"> Selling Price: </label></th><td><input id="selling_price" type="text" name="selling_price" required></td>
+      <th><label for="selling_price"> Selling Price: </label></th><th><input id="selling_price" type="text" name="selling_price" required></th>
     </tr>
 
-    <button onclick="location.href= '/books'"action="/books"type="submit" value="Create" type="button" name="button">Create</button>
+<tr>
+  <th></th>
+  <th><button class="myButton_update" onclick="location.href= '/books'"action="/books"type="submit" value="Create" type="button" name="button">Create</button></td>
+</th>
+
+
+
+</table>
+
 
     <!-- <button onclick="location.href= '/books/add'"action="/books"type="submit" value="Create" type="button" name="button">CreateATest</button> -->
 

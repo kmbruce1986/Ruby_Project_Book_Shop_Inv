@@ -56,65 +56,10 @@
     <td><%= @books.calculate_markup %></td>
   </tr>
 
-</table>
-
 <form action="/books/<%= @books.id %>/edit" method="get">
   <button class="myButton_edit" type="submit" value="Edit">Edit</button>
-</form>
-
-<form onsubmit="return confirm('Are you sure you want to delete this book?')" action="/books/<%= @books.id %>/delete" method="post">
+</form><form onsubmit="return confirm('Are you sure you want to delete this book?')" action="/books/<%= @books.id %>/delete" method="post">
   <button class="myButton_delete" type="submit" value="Delete">Delete</button>
 </form>
 
-<!-- <div class="grid">
-  <div class="grid-row">
-    <div class="cell">Title</div>
-    <div class="cell"><%= @books.title() %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Genre</div>
-    <div class="cell"><%= @books.genre %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Author_id</div>
-    <div class="cell"><%= @books.author_id %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Author_name</div>
-    <div class="cell"><a href="/authors/<%=@books.author_id %>"><%= @books.find_author.name %></a></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Description</div>
-    <div class="cell"><%= @books.description %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Quantity</div>
-    <div class="cell"><%= @books.quantity %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Cost Price</div>
-    <div class="cell"><%= @books.cost_price %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Stock Level</div>
-    <div class="cell"><%= @books.stock_level_counter %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Selling Price</div>
-    <div class="cell"><%= @books.selling_price %></div>
-  </div>
-
-  <div class="grid-row">
-    <div class="cell">Markup</div>
-    <div class="cell"><%= @books.calculate_markup %></div>
-  </div>
-
-</div> -->
+</table>
