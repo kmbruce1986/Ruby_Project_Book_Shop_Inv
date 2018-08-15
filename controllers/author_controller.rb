@@ -22,8 +22,6 @@ get '/authors/search_results' do
 @authors = Author.all
 if params[:search]
   @authors = Author.find_by_name(params[:search])
-else
-  @authors = Author.all
 end
 erb (:"author/results")
 end
