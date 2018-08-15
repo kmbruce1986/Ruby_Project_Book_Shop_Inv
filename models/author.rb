@@ -63,7 +63,6 @@ class Author
     return result
   end
 
-# not sure how this should work yet.
   def self.find_by_name(params)
     sql = "SELECT * FROM authors WHERE lower(name) LIKE $1"
     params = "%" + params + "%"

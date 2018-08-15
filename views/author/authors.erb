@@ -6,8 +6,8 @@
   <% @authors.each do |author| %>
   <tr>
     <th>Name:</th>
-    <td><%= author.name %></td>
-    <td><a href="/authors/<%= author.id %>"> Show Full Author Details </a></td>
+    <td><a href="/authors/<%= author.id %>"><%= author.name %></td>
+    <td><a href="/authors/<%= author.id %>"> Details </a></td>
   </tr>
   <% end %>
 </table>
