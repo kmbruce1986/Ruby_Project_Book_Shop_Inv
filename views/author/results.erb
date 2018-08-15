@@ -2,7 +2,6 @@
 <% if @authors.length != 0 %>
 <table>
   <% @authors.each do |author| %>
-  <td>Name</td>
   <tr><td><a href="/authors/<%= author.id %>"><%= author.name%></a></td>
     <% end %>
     <% else %>
