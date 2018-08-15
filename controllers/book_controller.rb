@@ -37,8 +37,6 @@ get '/books/search_genre_results' do
 @books = Book.all
 if params[:search]
   @books = Book.find_by_genre(params[:search])
-else
-  @books = Book.all
 end
 erb (:"book/results_genre")
 end
