@@ -13,10 +13,10 @@
   </tr>
 
 <form action="/authors/<%= @authors.id %>/edit" method="get">
-<button type="submit" value="Edit">Edit</button>
+<button class="myButton_edit" type="submit" value="Edit">Edit</button>
 </form>
 
 <form onsubmit="return confirm('Are you sure you want to delete this author?')" action="/authors/<%= @authors.id %>/delete" method="post">
-<button type="submit" value="Delete">Delete</button>
+<button class="myButton_delete" type="submit" value="Delete">Delete</button>
 </form>
 </table>
