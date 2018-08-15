@@ -5,7 +5,6 @@
 <table>
   <% @authors.each do |author| %>
   <tr>
-    <th>Name:</th>
     <td><a href="/authors/<%= author.id %>"><%= author.name %></td>
     <td><a href="/authors/<%= author.id %>"> Details </a></td>
   </tr>
