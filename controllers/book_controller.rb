@@ -52,7 +52,6 @@ post '/books' do
   @authors = Author.all
   @books = Book.new(params)
   @books.save()
-  # redirect '/books'
   erb(:"book/add_book")
 end
 

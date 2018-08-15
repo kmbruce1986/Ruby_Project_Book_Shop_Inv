@@ -14,6 +14,7 @@ p {
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
+  color: indianred;
 }
 
 label {
@@ -22,7 +23,7 @@ label {
 
 table {
     border-collapse: collapse;
-    border: 1px solid grey;
+    border: 1px solid indianred;
 }
 
 th {
@@ -31,14 +32,14 @@ th {
   text-align: left;
   padding: 10px;
   font-size: 20px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid indianred;
 
 }
 
 td {
   font-family: 'Montserrat', sans-serif;
   padding: 10px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid indianred;
 }
 
 nav {
@@ -88,7 +89,42 @@ a {
 .main_header {
   font-size: 40px;
 }
-/* 
+
+.update_button {
+   background: #FC7171;
+   background-image: -webkit-linear-gradient(top, #FC7171, #CD5C5C);
+   background-image: -moz-linear-gradient(top, #FC7171, #CD5C5C);
+   background-image: -ms-linear-gradient(top, #FC7171, #CD5C5C);
+   background-image: -o-linear-gradient(top, #FC7171, #CD5C5C);
+   background-image: linear-gradient(to bottom, #FC7171, #CD5C5C);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #FFFFFF;
+   font-family: Verdana;
+   font-size: 40px;
+   font-weight: 100;
+   padding: 40px;
+   box-shadow: 1px 1px 20px 0px #000000;
+   -webkit-box-shadow: 1px 1px 20px 0px #000000;
+   -moz-box-shadow: 1px 1px 20px 0px #000000;
+   text-shadow: 1px 1px 20px #6E092B;
+   border: solid #873D3D 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}
+
+.update_button:hover {
+   background: #E06464;
+   background-image: -webkit-linear-gradient(top, #E06464, #873D3D);
+   background-image: -moz-linear-gradient(top, #E06464, #873D3D);
+   background-image: -ms-linear-gradient(top, #E06464, #873D3D);
+   background-image: -o-linear-gradient(top, #E06464, #873D3D);
+   background-image: linear-gradient(to bottom, #E06464, #873D3D);
+   text-decoration: none;
+}
+/*
 .create_plus_button {
 	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;
 	-webkit-box-shadow: 3px 4px 0px 0px #8a2a21;

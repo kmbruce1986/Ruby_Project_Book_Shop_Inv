@@ -59,11 +59,11 @@
 </table>
 
 <form action="/books/<%= @books.id %>/edit" method="get">
-  <input type="submit" value="Edit">
+  <button type="submit" value="Edit">Edit</button>
 </form>
 
 <form onsubmit="return confirm('Are you sure you want to delete this book?')" action="/books/<%= @books.id %>/delete" method="post">
-  <input type="submit" value="Delete">
+  <button type="submit" value="Delete">Delete</button>
 </form>
 
 <!-- <div class="grid">
