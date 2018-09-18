@@ -63,10 +63,15 @@ class Author
     return result
   end
 
+# the search function - a user will input a search parameter
   def self.find_by_name(params)
+    # first, the information should be brought back from the DB where the name is like the entered value (which is likely to be a lowercase input)
     sql = "SELECT * FROM authors WHERE lower(name) LIKE $1"
+    # define what the user will be inputting (the parameters) and add space for a wildcard
     params = "%" + params + "%"
+    # define the values for the SqlRunner
     values = [params]
+    # define what should be returned, and then map the returned results (to show all author details)
     authors = SqlRunner.run(sql, values)
     result = authors.map {|author| Author.new(author)}
     return result

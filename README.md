@@ -8,3 +8,9 @@ dropdb bookshop
 createdb bookshop
 
 psql -d bookshop -f db/bookshop.sql
+
+To run seeds file:
+ruby db/seeds.rb
+
+To start sinatra:
+ruby app.rb

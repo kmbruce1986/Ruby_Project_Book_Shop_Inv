@@ -108,7 +108,7 @@ book4 = Book.new({
   'genre' => "Fantasy",
   'author_id' => author2.id,
   'description' => "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. ",
-  'quantity' => 10,
+  'quantity' => 9,
   'cost_price' => 5,
   'selling_price' => 10
   })
@@ -164,7 +164,7 @@ book8 = Book.new({
 book8.save
 
 book9 = Book.new({
-  'title' => "The Gracekeeprs",
+  'title' => "The Gracekeepers",
   'genre' => "Magic Realism",
   'author_id' => author9.id,
   'description' => "Inspired in part by Scottish myths and fairytales, The Gracekeepers tells a modern story of an irreparably changed world: one that harbors the same isolation and sadness, but also joys and marvels of our own age.",
